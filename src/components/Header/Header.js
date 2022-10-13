@@ -40,7 +40,10 @@ function Header() {
       {showMenu && (
         <>
           <div onClick={() => setShowMenu(false)} className="calc"></div>
-          <HeaderMenu setWishlistDisplay={setWishlistDisplay} />
+          <HeaderMenu
+            displayWishlist={() => setWishlistDisplay(true)}
+            hideMenu={() => setShowMenu(false)}
+          />
         </>
       )}
     </header>
